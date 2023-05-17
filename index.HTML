@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<H1>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      <H1>Car prices in pakistan</H1>
+      <h5>Please enter first letter capital</h5>
+      <label for="carName">Enter the name of the car:</label>
+      <input id="carName" type="text">  
+      <button onclick="displayprice()">Check</button>
+      <p id="priceDisplay"></p>
+<script>
+function displayprice(){
+var carName=document.getElementById("carName").value;
+var carprice=getprice(carName);
+document.getElementById("priceDisplay").innerHTML="The price of  "+carName+" is "+carprice;
+}
+
+function getprice(carName)
+{
+    var carprice={
+        "alto":200000,
+        "Civic":1000000,
+        "Corrolla":500000,
+        "City":3400000,
+        "Alsvin":350000,
+        "Sportage":950000,
+        "Mehran":700000,
+        "Bolan":200000
+        
+
+    };
+ return carprice[carName];
+}
+</script>
+</body>
+</html>
